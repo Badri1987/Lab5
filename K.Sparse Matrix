@@ -1,0 +1,10 @@
+x,y = map(int,input().split())
+l = []
+for i in range(x):
+    a = list(map(int,input().split()))
+    l.extend(a)
+len = len(l)
+if(l.count(0)>len-l.count(0)):
+    print("Yes")
+else:
+    print("No")
