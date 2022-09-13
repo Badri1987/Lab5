@@ -1,0 +1,19 @@
+tc = int(input())
+mat = []
+count=1
+for i in range(tc):
+    t = []
+    for j in range(tc):
+        t.append(count)
+        count+=1
+    mat.append(t)
+#reversing every second list in mat(rix)
+for i in range(len(mat)):
+    if(i%2!=0):
+        t = mat[i]
+        mat[i] = t[::-1]
+for i in range(tc):
+    for j in range(tc):
+        print(mat[i][j],end =" ")
+    print()
+    
