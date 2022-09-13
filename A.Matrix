@@ -1,0 +1,7 @@
+x,y = map(int,input().split())
+count = 1
+for i in range(x):
+    for j in range(y):
+        print(count,end=" ")
+        count+=1
+    print("")
