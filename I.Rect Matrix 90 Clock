@@ -1,0 +1,27 @@
+# your code goes here
+tc = int(input())
+for i in range(tc):
+    #copying the input to form a matrix
+    mat = []
+    l,b = map(int,input().split())
+    for i in range(l):
+        t = list(map(int,input().split()))
+        mat.append(t)
+    #Taking the corner elemet
+    cor = []
+    for i in range(b):
+        t = []
+        for j in range(l):
+            t.append(mat[j][i])
+        cor.append(t)
+    #Reversing the corner elemet
+    res = []
+    for i in range(len(cor)):
+        t = cor[i]
+        res.append(t[::-1])
+    #Printing the result
+    print(b,l)
+    for i in range(b):
+        for j in range(l):
+            print(res[i][j],end = " ")
+        print()
