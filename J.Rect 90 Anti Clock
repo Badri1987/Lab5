@@ -1,0 +1,23 @@
+# your code goes here
+tc = int(input())
+for i in range(tc):
+    #copying user input
+    x,y = map(int,input().split())
+    f = []
+    for i in range(x):
+        t = list(map(int,input().split()))
+        f.append(t)
+    #Searching req element and creating list
+    '''1 2 3 4
+        5 6 7 8
+        9 10 11 12
+    '''
+    print(y,x)
+    for j in range(y-1,-1,-1):
+        for i in range(x):
+            print(f[i][j],end = " ")
+        print()
+    
+
+    
+        
