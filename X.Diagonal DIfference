@@ -1,0 +1,12 @@
+n = int(input())
+l = []
+for i in range(n):
+    x = list(map(int,input().split()))
+    l.extend(x)
+rdsum=0
+ldsum=0
+for i in range(0,n*n,n+1):
+    rdsum+=l[i]
+for i in range(n-1,n*n-1,n-1):
+    ldsum+=l[i]
+print(abs(rdsum-ldsum))
