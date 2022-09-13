@@ -1,0 +1,23 @@
+tc = int(input())
+for i in range(tc):
+    n = int(input())
+    mat = []
+    for i in range(n):
+        t = list(map(int,input().split()))
+        mat.append(t)
+    #Obtaining the corner elements
+    col = []
+    for i in range(n):
+        t = []
+        for j in range(n):
+            t.append(mat[j][i])
+        col.append(t)
+    #Reversing the col rows
+    ans = []
+    for i in col:
+        ans.append(i[::-1])
+    for i in range(len(ans)):
+        for j in range(len(ans)):
+            print(ans[i][j],end = " ")
+        print()
+    print()
