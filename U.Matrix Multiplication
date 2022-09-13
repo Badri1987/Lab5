@@ -1,0 +1,29 @@
+# your code goes here
+import numpy as np
+
+
+x1,y1 = map(int,input().split())
+a=[]
+b=[]
+for i in range(x1):
+    t = list(map(int,input().split()))
+    a.append(t)
+    
+x2,y2 = map(int,input().split())
+for i in range(x2):
+    t = list(map(int,input().split()))
+    b.append(t)
+result = [[0 for x in range(3)] for y in range(3)]
+
+if(y1==x2):
+    print(x1,y2)
+    for i in range(x1):
+        for j in range(y2):
+            for k in range(x2):
+                 result[i][j]+=a[i][k]*b[k][j]
+    for i in range(x1):
+        for j in range(y2):
+            print(result[i][j], end = " ")
+        print()
+else:
+    print("-1")
