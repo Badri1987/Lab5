@@ -1,0 +1,19 @@
+x,y,xi,yi = map(int,input().split())
+mat = []
+count=0
+for i in range(x):
+    t = []
+    for j in range(y):
+        t.append(count)
+        count+=1
+    mat.append(t)
+#Snake format
+for i in range(x):
+    if(i%2!=0):
+        t = mat[i]
+        mat[i]=t[::-1]
+        
+    
+print(mat[xi-1][yi-1])
+    
+    
