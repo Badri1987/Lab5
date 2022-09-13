@@ -1,0 +1,10 @@
+tc = int(input())
+st = 2
+counter = 2
+for i in range(tc):
+    for j in range(tc):
+        print(st,end = " ")
+        st+=1
+    print()
+    counter+=1
+    st = counter
