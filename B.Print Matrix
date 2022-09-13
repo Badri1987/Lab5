@@ -1,0 +1,10 @@
+tc = int(input())
+l =[]
+for i in range((tc)):
+    a = list(map(int,input().split()))
+    l.append(a)
+x,y = map(int,input().split())
+for i in range(x):
+    for j in range(y):
+        print(l[i][j], end = " ")
+    print("")
