@@ -1,0 +1,31 @@
+#2220
+#2201
+#2011
+#0111
+
+#reverse the Whole List 
+'''0222
+   1022
+   1102
+   1110
+'''
+n = int(input())
+em = [[0 for i in range(n)] for j in range(n)]
+#for i>j 2
+#for i<j 1 
+for i in range(n):
+    for j in range(n):
+        if(i>j):
+            em[i][j]=2
+        elif(i<j):
+            em[i][j]=1
+        else:
+            em[i][j]=0
+res = []
+for i in range(n):
+    t = em[i]
+    res.append(t)
+for i in range(len(res)-1,-1,-1):
+    for j in range(n):
+        print(res[i][j],end = "")
+    print()
