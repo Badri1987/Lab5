@@ -1,0 +1,12 @@
+n = []
+row,col = map(int,input().split())
+min_num = []
+while row:
+    temp = list(map(int,input().split()))
+    min_num.append(min(temp))
+    n.append(temp)
+    row-=1 
+min_num = min(min_num)
+for index,line in enumerate(n,1):
+    if(min_num in line):
+        print(index,end = " ")
