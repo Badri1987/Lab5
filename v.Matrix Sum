@@ -1,0 +1,28 @@
+tc = int(input())
+for i in range(tc):
+    mat_size = int(input())
+    mat = [[0 for i in range(mat_size)]for j in range(mat_size)]
+    flag = True
+    while(flag):
+        d = list(map(str,input().split()))
+        if(d[0]=="END"):
+            flag = False
+            break
+        else:
+            if(d[0]=="SET"):
+                x1 = int(d[1])
+                y1 = int(d[2])
+                val = int(d[3])
+                mat[x1][y1] = val
+            elif(d[0]=="SUM"):
+                x1 = int(d[1])
+                x2 = int(d[2])
+                y1 = int(d[3])
+                y2 = int(d[4])
+                sum = 0
+                for i in range(x1,y1+1):
+                    for j in range(x2,y2+1):
+                        sum+=mat[i][j]
+                print(sum)
+                
+    
